@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+	<bean id="t1" class="kr.hs.study.beans.TestBean1" />
+
+	<!-- lazy-init = true이면, 객체가 xml 파일 로딩시 생성되는 것이 아닌, 사용자가 객체를 사용할때, getBean메서드가 호출될때 객체가 생성된다. -->
+	<!-- scope = "prototype"이면, getBean으로 객체를 호출할 때마다 새로운 객체가 생성된다. -->
+	<bean id="t2" class="kr.hs.study.beans.TestBean1" lazy-init="true" scope="prototype" />
+	
+	<!-- init-method : 생성자 호출 이후 바로 호출되는 메서드 지정 -->
+	<!-- destroy-method : ctx.close()이전 호출되는 메서드 지정 -->
+	<bean id="t3" class="kr.hs.study.beans.TestBean1" init-method = "initMethod" destroy-method="destroyMethod"/>
+
+</beans>

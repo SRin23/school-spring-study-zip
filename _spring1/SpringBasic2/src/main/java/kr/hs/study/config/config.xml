@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 객체 생성 설정을 위한 파일 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">     
+	                    
+	                      
+	<!-- TestBean의 객체를 생성해라 (=new Testbean();)-->
+	<!-- 패키지명까지 full Name을 똑바로(대소문자 구분) 작성해야한다. -->
+	<!-- id는 객체 이름을 일컫는다. -->
+	<!-- xml파일 로딩 시 객체가 생성됨 -->
+	<bean id = "t1" class="kr.hs.study.beans.TestBean"/>
+	<bean id = "t2" class="kr.hs.study.beans.TestBean"/>
+</beans>
