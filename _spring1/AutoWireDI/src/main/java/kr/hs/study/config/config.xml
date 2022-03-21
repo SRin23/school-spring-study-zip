@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 객체 생성 설정을 위한 파일 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 객체를 생성하는 순서는 상관이 없다 -->
+	<bean id="data1" class="kr.hs.study.beans.DataBean1"/>
+	<bean id="data2" class="kr.hs.study.beans.DataBean1"/>
+	<bean id="data3" class="kr.hs.study.beans.DataBean1"/>
+	
+	<!-- byName : Setter DI의 형식으로 작동된다. -->
+	<bean id="t1" class="kr.hs.study.beans.TestBean1" autowire="byName"/>
+	
+	<!-- byType : 동일한 type의 객체가 2개이상이면 Error가 난다. -->
+	<bean id="d1" class="kr.hs.study.beans.DataBean2"/>
+	<!-- <bean id="d2" class="kr.hs.study.beans.DataBean2"/> -->
+	<bean id="t2" class="kr.hs.study.beans.TestBean2" autowire="byType"/>
+	
+	<!-- constructor : 생성자 매개변수의 타입과 같은 객체를 찾아 주입-->
+	<bean id="dt1" class="kr.hs.study.beans.DataBean3"/>
+	<bean id="t3" class="kr.hs.study.beans.TestBean3" autowire="constructor"/>
+</beans> 
