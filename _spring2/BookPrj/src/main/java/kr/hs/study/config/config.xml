@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="p1" class="kr.hs.study.beans.PersonInfo">
+		<property name="name" value="kim" />
+		<property name="bookTitle" value="spring" />
+		<property name="price" value="8000" />
+	</bean>
+
+	<bean id="novel" class="kr.hs.study.beans.Novel">
+		<constructor-arg ref="p1"/>
+	</bean>
+
+	<bean id="p2" class="kr.hs.study.beans.PersonInfo">
+		<property name="name" value="lee" />
+		<property name="bookTitle" value="spring2" />
+		<property name="price" value="10000" />
+	</bean>
+
+	<bean id="poet" class="kr.hs.study.beans.Poet">
+		<constructor-arg ref="p2"/>
+	</bean>
+
+	<bean id="p3" class="kr.hs.study.beans.PersonInfo">
+		<property name="name" value="park" />
+		<property name="bookTitle" value="spring3" />
+		<property name="price" value="20000" />
+	</bean>
+
+	<bean id="magazine" class="kr.hs.study.beans.Magazine">
+		<constructor-arg ref="p3" />
+	</bean>
+
+</beans>

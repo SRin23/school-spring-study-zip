@@ -10,6 +10,7 @@ public class MainClass {
 		//사용 용도에 맞게 변경가능하다.(ex. GenericXmlApplicationContext)
 		
 		//config.xml파일을 읽은 후 메모리로 로딩하여 객체(bean)를 생성한 후 container에 전송후 보관(주소값보관)한다.(여기까지)
+		//ClassPathXmlApplicationContext은 xml파일을 로딩시키는 용도의 Container이다.
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("kr/hs/study/config/config.xml");
 		
 		//container에 있는 t1 Bean(객체)를 가지고와서 t1에 넣음
