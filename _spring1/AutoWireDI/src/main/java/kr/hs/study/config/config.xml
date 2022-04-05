@@ -11,6 +11,8 @@
 	                    http://www.springframework.org/schema/aop
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+
+	<!-- 참조형만 autowire를 사용할 수 있다. -->
 	<!-- 객체를 생성하는 순서는 상관이 없다 -->
 	<bean id="data1" class="kr.hs.study.beans.DataBean1"/>
 	<bean id="data2" class="kr.hs.study.beans.DataBean1"/>

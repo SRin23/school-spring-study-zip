@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 객체 생성 설정을 위한 파일 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+	                    
+	<bean id="d1" class="kr.hs.study.beans.DataBean1" />
+	
+	<!-- 생성자를 이용하여 DI -->
+	<bean id="t1" class="kr.hs.study.beans.TestBean1">
+		<constructor-arg ref="d1" />
+		<constructor-arg ref="d1" />
+	</bean>
+
+	<!-- @Autowire를 사용하기 위한 설정 -->
+	<!-- java파일에 등록되어있는 Annotation을 분석해서 실행하라는 의미 -->
+	<context:annotation-config/>
+	
+	<!-- Autowired는 기본적으로 type을 통해 주입힌다 -->
+	<!-- 객체 생성은 XML에서 @Autowire은 java파일에서 한다. -->
+	<!-- 주입되는 객체는 익명객체로 생성해도 괜찮다. -->
+	<bean class="kr.hs.study.beans.DataBean2"/>
+	
+	<bean id="d2" class="kr.hs.study.beans.DataBean2"/>
+	<bean id="t2" class="kr.hs.study.beans.TestBean2"/>
+	
+	
+	<!-- TestBean3 -->
+	<bean class="kr.hs.study.beans.DataBean3"/>
+	<bean class="kr.hs.study.beans.DataBean4"/>
+	<bean id="t3" class="kr.hs.study.beans.TestBean3"/>
+	
+</beans> 
