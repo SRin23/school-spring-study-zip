@@ -16,6 +16,7 @@
 	<aop:config>
 		<!-- 모듈로 등록 -->
 		<aop:aspect ref="advisor">
+			<!-- 모든 패키지, 클래스 상관없이 method1()에 적용 -->
 			<aop:pointcut id="point" expression="execution(* method1())" /> <!-- pointcut(관심받을 메서드) 지정 -->
 			<!-- <aop:before pointcut-ref="point" method="beforeMethod" /> -->	<!-- advice와 핵심관리 연결 -->
 			<!-- <aop:after pointcut-ref="point" method="afterMethod"/> -->
