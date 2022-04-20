@@ -17,6 +17,7 @@ public class MainClass {
 		obj1.method1(12, 34);
 		obj1.method1(12, "spring2");
 		obj1.method2();
+		obj1.methodInt();
 		
 		TestBean2 obj2 = ctx.getBean("t2", TestBean2.class);
 		obj2.method1();
