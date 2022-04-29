@@ -19,8 +19,19 @@ public class TestDao {
 	
 	//insert
 	public void insertData(TestBean bean) {
-		String sql = "insert into test values (?, ?)";
+		String sql = "insert into test (data1, data2) values (?, ?)";
 		db.update(sql, bean.getData1(), bean.getData2());
 	}
 	
+	//update
+	public void updateData(TestBean bean) {
+		String sql = "update test set data1 = ? where data2 = ?";
+		db.update(sql, bean.getData1(), bean.getData1());
+	}
+	
+	//delete
+	public void deleteData() {
+		String sql = "delete from TEST";
+		db.update(sql);
+	}
 }
