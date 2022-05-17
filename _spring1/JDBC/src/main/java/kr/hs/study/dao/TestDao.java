@@ -1,10 +1,13 @@
 package kr.hs.study.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import kr.hs.study.beans.TestBean;
+import kr.hs.study.mapper.MapperClass;
 
 @Component
 public class TestDao {
@@ -16,6 +19,9 @@ public class TestDao {
 	//JdbcTemplate 타입의 Bean을 찾아서 db에 저장
 	@Autowired
 	JdbcTemplate db;
+
+	@Autowired
+	private MapperClass mapper;
 	
 	//insert
 	public void insertData(TestBean bean) {
@@ -25,13 +31,20 @@ public class TestDao {
 	
 	//update
 	public void updateData(TestBean bean) {
-		String sql = "update test set data1 = ? where data2 = ?";
-		db.update(sql, bean.getData1(), bean.getData1());
+		String sql = "update test set data2=? where data1=?";
+		db.update(sql, bean.getData2(), bean.getData1());
 	}
 	
 	//delete
 	public void deleteData() {
 		String sql = "delete from TEST";
 		db.update(sql);
+	}
+	
+	//select
+	public List<TestBean> selectData() {
+		String sql = "select * from test";
+		List<TestBean> list = db.query(sql, mapper);	//sql query와 mapper를 함께 넘겨줌-> 반환형 List<>
+		return list;
 	}
 }

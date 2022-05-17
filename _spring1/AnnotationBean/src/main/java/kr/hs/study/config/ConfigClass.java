@@ -2,6 +2,7 @@ package kr.hs.study.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 import kr.hs.study.beans.DataBean1;
 import kr.hs.study.beans.DataBean2;
@@ -11,6 +12,7 @@ import kr.hs.study.beans.TestBean2;
 public class ConfigClass {
 	
 	@Bean(name="d1")
+	@Lazy
 	public DataBean1 java1() {
 		return new DataBean1();
 	}
