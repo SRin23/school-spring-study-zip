@@ -14,5 +14,8 @@
 		
 		<!-- PathVariable 사용시 test4/100/200/300해당 URL을 하위 디렉토리가 아닌, 데이터로 인식함 -->
 		<a href="test4/100/200/300">test4 PathVariable</a><hr>
+		
+		<!-- RequestParam을 많이 사용한다. -->
+		<a href="test5?data1=100&data2=200&data3=300&data3=400&data3=500&data4=600">test5 RequestParam</a>
 	</body>
 </html>
