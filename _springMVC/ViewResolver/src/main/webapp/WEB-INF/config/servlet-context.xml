@@ -13,10 +13,10 @@
 
 	<annotation-driven />
 
-	<context:component-scan base-package="kr.hs.study.controller" /> <!-- 무조건 Bean으로 만듦 -->
+	<context:component-scan base-package="kr.hs.study.controller" />
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" /> <!-- 접두사 -->
-		<beans:property name="suffix" value=".jsp" />	<!-- 접미사 -->
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
 	<!-- 정적파일 저장 장소(html, css, js, jquery, img, movie) -->
