@@ -1,0 +1,19 @@
+@charset "EUC-KR";
+
+h1{
+	color:blue;
+}
+
+.menu_link:link{
+	text-decoration: none;
+	color: black;
+}
+
+.menu_link:visited{
+	text-decoration: none;
+	color: black;
+}
+
+.menu_link:hover{
+	font-weight: 900;
+}

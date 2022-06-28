@@ -5,7 +5,6 @@
 <head>
 <meta charset="EUC-KR">
 <title>성적처리</title>
-<link href="./resources/css/main.css" type="text/css" rel="stylesheet" >
 </head>
 <body>
 <h1>성적을 입력하세요</h1>

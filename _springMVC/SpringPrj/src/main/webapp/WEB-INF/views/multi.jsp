@@ -5,7 +5,6 @@
 <head>
 <meta charset="EUC-KR">
 <title>구구단</title>
-<link href="./resources/css/main.css" type="text/css" rel="stylesheet" >
 </head>
 <body>
 	<h1>구구단의 단을 입력하세요</h1>
