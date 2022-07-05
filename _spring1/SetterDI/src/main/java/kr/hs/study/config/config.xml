@@ -22,8 +22,7 @@
 
 	<!-- 객체 미리 생성 -->
 	<!-- lazy-init="true" scope="prototype"을 이용하여 하나의 객체 생성 명령으로 다른 주소의 객체 여러개를 만들 수 있다. -->
-	<bean id="d1" class="kr.hs.study.beans.DataBean" lazy-init="true"
-		scope="prototype" />
+	<bean id="d1" class="kr.hs.study.beans.DataBean" lazy-init="true" scope="prototype" />
 	<bean id="d2" class="kr.hs.study.beans.DataBean" />
 	<bean id="d3" class="kr.hs.study.beans.DataBean" />
 

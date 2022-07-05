@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Hi Spring MVC~</h1>
-<!-- 	<img alt="Spring logo" src="./resources/img/1.svg"><br> -->
+	<img alt="Spring logo" src="./resources/img/1.svg"><br>
 	<a href="test1?data1=100&data2=200">test1 MAP으로 받기</a><br>
 	<a href="test2?data1=10&data2=20&data3=30&data3=40">test2 LIST로 받기</a><br>
 	<a href="test3?data1=500&data2=600&data3=700">test3 Model객체로 받기</a><br>

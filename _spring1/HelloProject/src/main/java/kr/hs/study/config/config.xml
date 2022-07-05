@@ -12,6 +12,5 @@
 
 	<!-- 객체 생성 설정 -->
 	<bean id="en" class="kr.hs.study.beans.HelloWorldEn" />
-	
 	<bean id="ko" class="kr.hs.study.beans.HelloWorldKo" />
 </beans>
