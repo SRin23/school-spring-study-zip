@@ -47,7 +47,6 @@ public class MultiplicationController {
 			multi[i] = data + " * " + i + " = " + (data*i);
 			mv.addObject("value" + (i+1), multi[i]);
 		}
-		
 		return mv;
 	}
 	
